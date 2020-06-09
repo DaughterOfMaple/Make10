@@ -8,10 +8,11 @@
 
 import UIKit
 
-class StatsViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+class StatsViewController: UIViewController {  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    let viewBackground = Gradient(superView: view)
+    viewBackground.add(to: view)
+    viewBackground.add(to: self.tabBarController!.tabBar)
+  }
 }

@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12A1B283C77421504345133E42BFF7FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		1E39C53EAD729F3FC7FEA3A0F9ABBEF7 /* KTCenterFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 92FFA21329D21CA3D88E49689DE4EBA7 /* KTCenterFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D08D5034CAB4304DF26774E46430BBF /* Pods-MakeTenSimple-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE62EE540B9D13FA35769F2CEC5FC268 /* Pods-MakeTenSimple-dummy.m */; };
+		4D4C3534A2393366FE166843A73D6A6B /* KTCenterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C56F0D19530B7C2013A584798567F1 /* KTCenterFlowLayout.m */; };
+		A13097E4E7C9D206ED2773A73878B428 /* KTCenterFlowLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C376731A7B90F98D7F0B44D1F72434 /* KTCenterFlowLayout-dummy.m */; };
+		CF963BEEDB114CFE335D3D0B65CD18FB /* Pods-MakeTenSimple-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A005E5A622CF0C6CA0636C87A689F4 /* Pods-MakeTenSimple-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1B0D0802E1D6BA8856378EF298CDF9E /* KTCenterFlowLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F2C62FFD1FEBE88C17854343C4D366B /* KTCenterFlowLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2B750FA7B60828528EE3938EC03B400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		DEB310545CD4B35851168CDABF2C4634 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE8CABD5DF920E230E3F0153C56FC99E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E19CA0A6B05324862F89AEC323372A80;
+			remoteInfo = KTCenterFlowLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1809B734E2711907CA85253415EF2F78 /* KTCenterFlowLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KTCenterFlowLayout.modulemap; sourceTree = "<group>"; };
+		19A005E5A622CF0C6CA0636C87A689F4 /* Pods-MakeTenSimple-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MakeTenSimple-umbrella.h"; sourceTree = "<group>"; };
+		1F73D0A0B78BE32189733EDE1185B335 /* KTCenterFlowLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KTCenterFlowLayout.debug.xcconfig; sourceTree = "<group>"; };
+		27FEAB7A7AE1C285A7D77045988C9D77 /* Pods-MakeTenSimple-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MakeTenSimple-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2F2C62FFD1FEBE88C17854343C4D366B /* KTCenterFlowLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KTCenterFlowLayout-umbrella.h"; sourceTree = "<group>"; };
+		3103A4187AEFB380E90F41054010CFA0 /* KTCenterFlowLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KTCenterFlowLayout.release.xcconfig; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		39C376731A7B90F98D7F0B44D1F72434 /* KTCenterFlowLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KTCenterFlowLayout-dummy.m"; sourceTree = "<group>"; };
+		3BBC39142A617B681BB2FAE961339583 /* Pods_MakeTenSimple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MakeTenSimple.framework; path = "Pods-MakeTenSimple.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6051608F451CF039872DC2584FFAC26F /* KTCenterFlowLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "KTCenterFlowLayout-Info.plist"; sourceTree = "<group>"; };
+		83C56F0D19530B7C2013A584798567F1 /* KTCenterFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KTCenterFlowLayout.m; sourceTree = "<group>"; };
+		8441E814ABDC0BD184945E907D307B9F /* Pods-MakeTenSimple-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MakeTenSimple-frameworks.sh"; sourceTree = "<group>"; };
+		89D1B029D8315F5C3A0B31C7E1CAECF0 /* Pods-MakeTenSimple-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MakeTenSimple-Info.plist"; sourceTree = "<group>"; };
+		89DA5B597795D53E3968F1EFBEA9023F /* Pods-MakeTenSimple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MakeTenSimple.release.xcconfig"; sourceTree = "<group>"; };
+		92FFA21329D21CA3D88E49689DE4EBA7 /* KTCenterFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KTCenterFlowLayout.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A419436490FDF3B62B32B99F08BA0831 /* Pods-MakeTenSimple-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MakeTenSimple-acknowledgements.plist"; sourceTree = "<group>"; };
+		AE62EE540B9D13FA35769F2CEC5FC268 /* Pods-MakeTenSimple-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MakeTenSimple-dummy.m"; sourceTree = "<group>"; };
+		C3884EA542724040128C7EEEEAE19E75 /* Pods-MakeTenSimple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MakeTenSimple.debug.xcconfig"; sourceTree = "<group>"; };
+		CFA58D8DF48B26FBE259603E2959210A /* KTCenterFlowLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KTCenterFlowLayout-prefix.pch"; sourceTree = "<group>"; };
+		D42582BB745F612762E7FBE71C6A4FE3 /* Pods-MakeTenSimple.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MakeTenSimple.modulemap"; sourceTree = "<group>"; };
+		EBD6221ECC63615E52F00C0010F9CBEC /* KTCenterFlowLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KTCenterFlowLayout.framework; path = KTCenterFlowLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5273EA0046B61A18070FF2D451498072 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEB310545CD4B35851168CDABF2C4634 /* Foundation.framework in Frameworks */,
+				12A1B283C77421504345133E42BFF7FE /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA88DFD11E7EF8881EFBA66CF300C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2B750FA7B60828528EE3938EC03B400 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CF5593B2245F6594291C17E484E039A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1809B734E2711907CA85253415EF2F78 /* KTCenterFlowLayout.modulemap */,
+				39C376731A7B90F98D7F0B44D1F72434 /* KTCenterFlowLayout-dummy.m */,
+				6051608F451CF039872DC2584FFAC26F /* KTCenterFlowLayout-Info.plist */,
+				CFA58D8DF48B26FBE259603E2959210A /* KTCenterFlowLayout-prefix.pch */,
+				2F2C62FFD1FEBE88C17854343C4D366B /* KTCenterFlowLayout-umbrella.h */,
+				1F73D0A0B78BE32189733EDE1185B335 /* KTCenterFlowLayout.debug.xcconfig */,
+				3103A4187AEFB380E90F41054010CFA0 /* KTCenterFlowLayout.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KTCenterFlowLayout";
+			sourceTree = "<group>";
+		};
+		6FA592AB65DEBE58A3BB9505CCDA94BB /* Pods-MakeTenSimple */ = {
+			isa = PBXGroup;
+			children = (
+				D42582BB745F612762E7FBE71C6A4FE3 /* Pods-MakeTenSimple.modulemap */,
+				27FEAB7A7AE1C285A7D77045988C9D77 /* Pods-MakeTenSimple-acknowledgements.markdown */,
+				A419436490FDF3B62B32B99F08BA0831 /* Pods-MakeTenSimple-acknowledgements.plist */,
+				AE62EE540B9D13FA35769F2CEC5FC268 /* Pods-MakeTenSimple-dummy.m */,
+				8441E814ABDC0BD184945E907D307B9F /* Pods-MakeTenSimple-frameworks.sh */,
+				89D1B029D8315F5C3A0B31C7E1CAECF0 /* Pods-MakeTenSimple-Info.plist */,
+				19A005E5A622CF0C6CA0636C87A689F4 /* Pods-MakeTenSimple-umbrella.h */,
+				C3884EA542724040128C7EEEEAE19E75 /* Pods-MakeTenSimple.debug.xcconfig */,
+				89DA5B597795D53E3968F1EFBEA9023F /* Pods-MakeTenSimple.release.xcconfig */,
+			);
+			name = "Pods-MakeTenSimple";
+			path = "Target Support Files/Pods-MakeTenSimple";
+			sourceTree = "<group>";
+		};
+		7AC3A8CE6D4D26B33C0A1F90FE14B4EE /* KTCenterFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				92FFA21329D21CA3D88E49689DE4EBA7 /* KTCenterFlowLayout.h */,
+				83C56F0D19530B7C2013A584798567F1 /* KTCenterFlowLayout.m */,
+				6CF5593B2245F6594291C17E484E039A /* Support Files */,
+			);
+			name = KTCenterFlowLayout;
+			path = KTCenterFlowLayout;
+			sourceTree = "<group>";
+		};
+		B73A8EAE1A4582A2C73437097701CD7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AC3A8CE6D4D26B33C0A1F90FE14B4EE /* KTCenterFlowLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				B73A8EAE1A4582A2C73437097701CD7F /* Pods */,
+				DA28C41EC9EE2A101C6A90CE46A06B00 /* Products */,
+				E1380C625DA05495B72F3FA5E19BD182 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DA28C41EC9EE2A101C6A90CE46A06B00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBD6221ECC63615E52F00C0010F9CBEC /* KTCenterFlowLayout.framework */,
+				3BBC39142A617B681BB2FAE961339583 /* Pods_MakeTenSimple.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1380C625DA05495B72F3FA5E19BD182 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FA592AB65DEBE58A3BB9505CCDA94BB /* Pods-MakeTenSimple */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3B7A6B00134DCBFA0AA1AB5F3F5B7489 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF963BEEDB114CFE335D3D0B65CD18FB /* Pods-MakeTenSimple-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		655DBA52450E5DAF54F6A4CC2995ED2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1B0D0802E1D6BA8856378EF298CDF9E /* KTCenterFlowLayout-umbrella.h in Headers */,
+				1E39C53EAD729F3FC7FEA3A0F9ABBEF7 /* KTCenterFlowLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		58F952B93F9176FED1C6F126993389E4 /* Pods-MakeTenSimple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849B15D8959552D550D7C1400FA57FA9 /* Build configuration list for PBXNativeTarget "Pods-MakeTenSimple" */;
+			buildPhases = (
+				3B7A6B00134DCBFA0AA1AB5F3F5B7489 /* Headers */,
+				B87A920146B21F98FEEF892FF14F3ECF /* Sources */,
+				6CA88DFD11E7EF8881EFBA66CF300C5D /* Frameworks */,
+				0E4E049E4E31E7912650C830833F32AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				750CD7A9EE7AB1DDCD03DB7ADBAEBE75 /* PBXTargetDependency */,
+			);
+			name = "Pods-MakeTenSimple";
+			productName = "Pods-MakeTenSimple";
+			productReference = 3BBC39142A617B681BB2FAE961339583 /* Pods_MakeTenSimple.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E19CA0A6B05324862F89AEC323372A80 /* KTCenterFlowLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D2F089A401BABF55309DD8513A14AC1 /* Build configuration list for PBXNativeTarget "KTCenterFlowLayout" */;
+			buildPhases = (
+				655DBA52450E5DAF54F6A4CC2995ED2E /* Headers */,
+				E01BF22993813A1BCEE660E2402DA0BC /* Sources */,
+				5273EA0046B61A18070FF2D451498072 /* Frameworks */,
+				093388EFD62DACD61A472872AA26F2D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KTCenterFlowLayout;
+			productName = KTCenterFlowLayout;
+			productReference = EBD6221ECC63615E52F00C0010F9CBEC /* KTCenterFlowLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = DA28C41EC9EE2A101C6A90CE46A06B00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E19CA0A6B05324862F89AEC323372A80 /* KTCenterFlowLayout */,
+				58F952B93F9176FED1C6F126993389E4 /* Pods-MakeTenSimple */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		093388EFD62DACD61A472872AA26F2D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E4E049E4E31E7912650C830833F32AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B87A920146B21F98FEEF892FF14F3ECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D08D5034CAB4304DF26774E46430BBF /* Pods-MakeTenSimple-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E01BF22993813A1BCEE660E2402DA0BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A13097E4E7C9D206ED2773A73878B428 /* KTCenterFlowLayout-dummy.m in Sources */,
+				4D4C3534A2393366FE166843A73D6A6B /* KTCenterFlowLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		750CD7A9EE7AB1DDCD03DB7ADBAEBE75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KTCenterFlowLayout;
+			target = E19CA0A6B05324862F89AEC323372A80 /* KTCenterFlowLayout */;
+			targetProxy = AE8CABD5DF920E230E3F0153C56FC99E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1909A9266BE491B08A8EF3681202D421 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F73D0A0B78BE32189733EDE1185B335 /* KTCenterFlowLayout.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KTCenterFlowLayout/KTCenterFlowLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KTCenterFlowLayout/KTCenterFlowLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KTCenterFlowLayout/KTCenterFlowLayout.modulemap";
+				PRODUCT_MODULE_NAME = KTCenterFlowLayout;
+				PRODUCT_NAME = KTCenterFlowLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		257497152829C177993B5EC99C1D227A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		44B530645F86BE397D67F629ADC7C614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3103A4187AEFB380E90F41054010CFA0 /* KTCenterFlowLayout.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KTCenterFlowLayout/KTCenterFlowLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KTCenterFlowLayout/KTCenterFlowLayout-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/KTCenterFlowLayout/KTCenterFlowLayout.modulemap";
+				PRODUCT_MODULE_NAME = KTCenterFlowLayout;
+				PRODUCT_NAME = KTCenterFlowLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		612E2815240BA8B4EB5DD6145F2BC0B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3884EA542724040128C7EEEEAE19E75 /* Pods-MakeTenSimple.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MakeTenSimple/Pods-MakeTenSimple-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MakeTenSimple/Pods-MakeTenSimple.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E1FD66686280F8430DC2A8AB4B2D94CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89DA5B597795D53E3968F1EFBEA9023F /* Pods-MakeTenSimple.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MakeTenSimple/Pods-MakeTenSimple-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MakeTenSimple/Pods-MakeTenSimple.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D2F089A401BABF55309DD8513A14AC1 /* Build configuration list for PBXNativeTarget "KTCenterFlowLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1909A9266BE491B08A8EF3681202D421 /* Debug */,
+				44B530645F86BE397D67F629ADC7C614 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849B15D8959552D550D7C1400FA57FA9 /* Build configuration list for PBXNativeTarget "Pods-MakeTenSimple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				612E2815240BA8B4EB5DD6145F2BC0B1 /* Debug */,
+				E1FD66686280F8430DC2A8AB4B2D94CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

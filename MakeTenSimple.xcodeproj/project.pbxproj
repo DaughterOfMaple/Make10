@@ -21,8 +21,7 @@
 		5A5C00E52488FFB000086468 /* MakeTenDragAndDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C00E42488FFB000086468 /* MakeTenDragAndDrop.swift */; };
 		5A5C00E7248901EA00086468 /* MakeTenGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C00E6248901EA00086468 /* MakeTenGestures.swift */; };
 		5A5C00EE2489033300086468 /* InputErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C00ED2489033300086468 /* InputErrors.swift */; };
-		5A5C00F22489034100086468 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C00F12489034100086468 /* ErrorHandling.swift */; };
-		5A5C00F42489034A00086468 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C00F32489034A00086468 /* Responses.swift */; };
+		5A5C00F22489034100086468 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C00F12489034100086468 /* ErrorManager.swift */; };
 		5A5C00F62489035A00086468 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C00F52489035A00086468 /* K.swift */; };
 		5A5C00F82489036400086468 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C00F72489036400086468 /* TimeManager.swift */; };
 		5A5C00FB248903BB00086468 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5C00FA248903BB00086468 /* String.swift */; };
@@ -35,6 +34,12 @@
 		5A6F23EC24890F5800F39B06 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F23EB24890F5800F39B06 /* RoundedButton.swift */; };
 		5A6F23EE248B2C6C00F39B06 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F23ED248B2C6C00F39B06 /* AchievementsViewController.swift */; };
 		5A83EB63248B3F5F00FC3C1A /* DropDownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB62248B3F5F00FC3C1A /* DropDownMenu.swift */; };
+		5A83EB65248B75C700FC3C1A /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB64248B75C700FC3C1A /* AlertManager.swift */; };
+		5A83EB67248B76F600FC3C1A /* ResponseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB66248B76F600FC3C1A /* ResponseManager.swift */; };
+		5A83EB69248BD16400FC3C1A /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB68248BD16400FC3C1A /* Gradient.swift */; };
+		5A83EB6B248C987800FC3C1A /* OperationsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB6A248C987800FC3C1A /* OperationsButton.swift */; };
+		5A83EB6D248C9A7200FC3C1A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB6C248C9A7200FC3C1A /* Button.swift */; };
+		5A83EB6F248C9C1500FC3C1A /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB6E248C9C1500FC3C1A /* CheckButton.swift */; };
 		CF74CDE427177EDED779550D /* Pods_MakeTenSimple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1201267792105CD7E1E713 /* Pods_MakeTenSimple.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +60,7 @@
 		5A5C00E42488FFB000086468 /* MakeTenDragAndDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTenDragAndDrop.swift; sourceTree = "<group>"; };
 		5A5C00E6248901EA00086468 /* MakeTenGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTenGestures.swift; sourceTree = "<group>"; };
 		5A5C00ED2489033300086468 /* InputErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputErrors.swift; sourceTree = "<group>"; };
-		5A5C00F12489034100086468 /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
-		5A5C00F32489034A00086468 /* Responses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		5A5C00F12489034100086468 /* ErrorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		5A5C00F52489035A00086468 /* K.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		5A5C00F72489036400086468 /* TimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		5A5C00FA248903BB00086468 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -68,6 +72,12 @@
 		5A6F23EB24890F5800F39B06 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		5A6F23ED248B2C6C00F39B06 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		5A83EB62248B3F5F00FC3C1A /* DropDownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenu.swift; sourceTree = "<group>"; };
+		5A83EB64248B75C700FC3C1A /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		5A83EB66248B76F600FC3C1A /* ResponseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseManager.swift; sourceTree = "<group>"; };
+		5A83EB68248BD16400FC3C1A /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		5A83EB6A248C987800FC3C1A /* OperationsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsButton.swift; sourceTree = "<group>"; };
+		5A83EB6C248C9A7200FC3C1A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		5A83EB6E248C9C1500FC3C1A /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		AD1201267792105CD7E1E713 /* Pods_MakeTenSimple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeTenSimple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27218960CBB605B9A18969A /* Pods-MakeTenSimple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeTenSimple.debug.xcconfig"; path = "Target Support Files/Pods-MakeTenSimple/Pods-MakeTenSimple.debug.xcconfig"; sourceTree = "<group>"; };
 		C3ADBC63CBA6D86F608162E8 /* Pods-MakeTenSimple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeTenSimple.release.xcconfig"; path = "Target Support Files/Pods-MakeTenSimple/Pods-MakeTenSimple.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,10 +173,13 @@
 		5A2CC25F2483BA7800B18EB7 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
+				5A83EB68248BD16400FC3C1A /* Gradient.swift */,
 				5A2CC25D2483BA6D00B18EB7 /* NumberCell.swift */,
 				5A2CC2622483C04A00B18EB7 /* OperationCell.swift */,
 				5A6F23EB24890F5800F39B06 /* RoundedButton.swift */,
 				5A83EB62248B3F5F00FC3C1A /* DropDownMenu.swift */,
+				5A83EB6A248C987800FC3C1A /* OperationsButton.swift */,
+				5A83EB6E248C9C1500FC3C1A /* CheckButton.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -175,12 +188,13 @@
 			isa = PBXGroup;
 			children = (
 				5A5C00F52489035A00086468 /* K.swift */,
-				5A5C00F32489034A00086468 /* Responses.swift */,
-				5A5C00F12489034100086468 /* ErrorHandling.swift */,
-				5A5C00ED2489033300086468 /* InputErrors.swift */,
-				5A6F23E924890D3600F39B06 /* Calculator.swift */,
 				5A5C00E12487C79B00086468 /* GameManager.swift */,
 				5A5C00F72489036400086468 /* TimeManager.swift */,
+				5A83EB64248B75C700FC3C1A /* AlertManager.swift */,
+				5A83EB66248B76F600FC3C1A /* ResponseManager.swift */,
+				5A6F23E924890D3600F39B06 /* Calculator.swift */,
+				5A5C00F12489034100086468 /* ErrorManager.swift */,
+				5A5C00ED2489033300086468 /* InputErrors.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +206,7 @@
 				5A5C00FE248903CA00086468 /* Double.swift */,
 				5A5C00FC248903C200086468 /* TimeInterval.swift */,
 				5A5C00FA248903BB00086468 /* String.swift */,
+				5A83EB6C248C9A7200FC3C1A /* Button.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,21 +344,26 @@
 				5A2CC23B2483AFDE00B18EB7 /* AppDelegate.swift in Sources */,
 				5A6F23EC24890F5800F39B06 /* RoundedButton.swift in Sources */,
 				5A83EB63248B3F5F00FC3C1A /* DropDownMenu.swift in Sources */,
+				5A83EB6F248C9C1500FC3C1A /* CheckButton.swift in Sources */,
 				5A6F23EA24890D3600F39B06 /* Calculator.swift in Sources */,
 				5A5C00EE2489033300086468 /* InputErrors.swift in Sources */,
+				5A83EB65248B75C700FC3C1A /* AlertManager.swift in Sources */,
 				5A2CC2582483B46900B18EB7 /* MakeTenViewController.swift in Sources */,
+				5A83EB67248B76F600FC3C1A /* ResponseManager.swift in Sources */,
 				5A2CC25B2483B87200B18EB7 /* StatsViewController.swift in Sources */,
 				5A5C00F82489036400086468 /* TimeManager.swift in Sources */,
 				5A5C00F62489035A00086468 /* K.swift in Sources */,
 				5A5C00FF248903CA00086468 /* Double.swift in Sources */,
 				5A2CC2632483C04A00B18EB7 /* OperationCell.swift in Sources */,
+				5A83EB6D248C9A7200FC3C1A /* Button.swift in Sources */,
 				5A5C00E22487C79B00086468 /* GameManager.swift in Sources */,
-				5A5C00F22489034100086468 /* ErrorHandling.swift in Sources */,
+				5A5C00F22489034100086468 /* ErrorManager.swift in Sources */,
 				5A5C00E52488FFB000086468 /* MakeTenDragAndDrop.swift in Sources */,
+				5A83EB69248BD16400FC3C1A /* Gradient.swift in Sources */,
 				5A2CC23D2483AFDE00B18EB7 /* SceneDelegate.swift in Sources */,
+				5A83EB6B248C987800FC3C1A /* OperationsButton.swift in Sources */,
 				5A2CC25E2483BA6D00B18EB7 /* NumberCell.swift in Sources */,
 				5A5C00FB248903BB00086468 /* String.swift in Sources */,
-				5A5C00F42489034A00086468 /* Responses.swift in Sources */,
 				5A6F23EE248B2C6C00F39B06 /* AchievementsViewController.swift in Sources */,
 				5A5C00E7248901EA00086468 /* MakeTenGestures.swift in Sources */,
 			);

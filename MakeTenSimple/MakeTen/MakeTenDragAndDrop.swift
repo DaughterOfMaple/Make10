@@ -11,86 +11,107 @@ import UIKit
 //MARK: - CollectionView Drag Delegate Methods
 extension MakeTenViewController:  UICollectionViewDragDelegate {
   func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+    // collectionView is always the starting location
+    var selectedOperation: String
     
-    var selectedOperation: String = ""
-    
-    if collectionView == numbersCollectionView {
+    switch collectionView {
+    case numbersCollectionView:
       selectedOperation = gameManager.numbersArray[indexPath.item]
-    }
-    else if collectionView == operationsCollectionViewRow1 {
-      selectedOperation = gameManager.operationsRow1[indexPath.item]
-    }
-    else if collectionView == operationsCollectionViewRow2 {
-      selectedOperation = gameManager.operationsRow2[indexPath.item]
-    }
-    
-    if Int(selectedOperation) != nil {
-      return [UIDragItem]()
+      if selectedOperation.isDigit() {
+        return [UIDragItem]()
+      }
+    case operationsCollectionView:
+      selectedOperation = gameManager.operationsArray[indexPath.item]
+    default:
+      selectedOperation = ""
     }
     
     let itemProvider = NSItemProvider(object: selectedOperation as NSString)
     let dragItem = UIDragItem(itemProvider: itemProvider)
     dragItem.localObject = selectedOperation
-    
     return [dragItem]
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, dragSessionDidEnd session: UIDragSession) {
+    // collectionView is always the starting location
+    cameFromNumbers = (collectionView == numbersCollectionView) ? true : false
+//    session.
+    print("cameFromNumbers: \(cameFromNumbers)")
   }
 }
 
 //MARK: - CollectionView Drop Delegate Methods
 extension MakeTenViewController: UICollectionViewDropDelegate {
   func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
-    
-    if session.localDragSession != nil {
-      if collectionView == numbersCollectionView && destinationIndexPath != nil {
-        
-        if collectionView.hasActiveDrag {
-          return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
-        }
+    // collectionView is always the end location
+    switch collectionView {
+    case numbersCollectionView:
+      if session.localDragSession != nil {
+        return UICollectionViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+      } else {
         return UICollectionViewDropProposal(operation: .copy, intent: .insertAtDestinationIndexPath)
-        
       }
-        
-      else if collectionView == operationsCollectionViewRow1 || collectionView == operationsCollectionViewRow2 {
-        return UICollectionViewDropProposal(operation: .move, intent: .unspecified)
-      }
-      return UICollectionViewDropProposal(operation: .cancel)
+    default:
+      return UICollectionViewDropProposal(operation: .move)
     }
-    
-    return UICollectionViewDropProposal(operation: .forbidden)
   }
   
   func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
-    
-    let item = coordinator.items.first!
+    // collectionView is always the end location
+    guard let item = coordinator.items.first else {
+      print("item failed")
+      return
+    }
+    guard let itemText = item.dragItem.localObject as? String  else {
+      print("itemText failed")
+      return
+    }
     let source = item.sourceIndexPath
-    let destination = coordinator.destinationIndexPath
     
-    if coordinator.proposal.operation == .move {
-      if collectionView == numbersCollectionView && collectionView.hasActiveDrag {
+    guard let destination = coordinator.destinationIndexPath else {
+      print("destination failed")
+      return
+    }
+    
+    switch collectionView {
+    case numbersCollectionView:
+      if collectionView.hasActiveDrag {
+        print("hasdrag")
         collectionView.performBatchUpdates({
           gameManager.numbersArray.remove(at: source!.item)
-          gameManager.numbersArray.insert(item.dragItem.localObject as! String, at: destination!.item)
-          collectionView.moveItem(at: source!, to: destination!)
+          gameManager.numbersArray.insert(itemText, at: destination.item)
+          collectionView.moveItem(at: source!, to: destination)
         }, completion: nil)
-        coordinator.drop(item.dragItem, toItemAt: destination!)
+        coordinator.drop(item.dragItem, toItemAt: destination)
+      } else {
+        print("doesn't have drag, but numbers")
+        gameManager.numbersArray.insert(itemText, at: destination.item)
+        collectionView.insertItems(at: [destination])
+        coordinator.drop(item.dragItem, toItemAt: destination)
+        
+        print("performdropwith: \(collectionView.cellForItem(at: [0,0])!.reuseIdentifier!)")
       }
-      else if collectionView == operationsCollectionViewRow1 || collectionView == operationsCollectionViewRow2 {
-        numbersCollectionView.performBatchUpdates({
-          gameManager.numbersArray.remove(at: source!.item)
-          numbersCollectionView.deleteItems(at: [source!])
-          print("move")
-        }, completion: nil)
+    case operationsCollectionView:
+      if cameFromNumbers {
+        gameManager.numbersArray.remove(at: 0)
+//        gameManager.numbersArray.remove(at: )
+//        numbersCollectionView.deleteItems(at: )
+//        numbersCollectionView.reloadData()
       }
+    default:
+      print("operationsCV")
+      // HOW DO I FIND OUT THE INDEXPATH OF THE STARTING COLLECTIONVIEW??
+//      if cameFromNumbers && itemText.isDigit() == false {
+//        gameManager.numbersArray.remove(at: )
+//        numbersCollectionView.deleteItems(at: )
+//        numbersCollectionView.reloadData()
+//      }
     }
-    else if coordinator.proposal.operation == .copy {
-      if let item = coordinator.items.first {
-        collectionView.performBatchUpdates({
-          gameManager.numbersArray.insert(item.dragItem.localObject as! String, at: destination!.item)
-          collectionView.insertItems(at: [destination!])
-        }, completion: nil)
-        coordinator.drop(item.dragItem, toItemAt: destination!)
-        print("copy")
-      }
-    }
+
+    
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, dropSessionDidEnd session: UIDropSession) {
+    print("dropSessionDidEnd: \(collectionView.cellForItem(at: [0,0])!.reuseIdentifier!)")
   }
 }

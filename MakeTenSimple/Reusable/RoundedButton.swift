@@ -13,8 +13,8 @@ import UIKit
   override func layoutSubviews() {
     super.layoutSubviews()
     
-    layer.backgroundColor = K.BrandColors.purple?.cgColor
-    layer.borderColor = UIColor.black.cgColor
+//    layer.backgroundColor = K.BrandColors.purple?.cgColor
+    layer.borderColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)
     layer.borderWidth = 1
     layer.cornerRadius = 15
     
@@ -24,5 +24,7 @@ import UIKit
     layer.shadowOpacity = 0.8
     
     titleLabel?.textColor = .white
+    
+    
   }
 }

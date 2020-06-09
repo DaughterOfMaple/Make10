@@ -17,42 +17,60 @@ class MakeTenViewController: UIViewController {
   @IBOutlet weak var timerLabel: UILabel!
   @IBOutlet weak var resultLabel: UILabel!
   
-  @IBOutlet weak var pauseButton: UIButton!
   @IBOutlet weak var modeButton: UIButton!
   @IBOutlet weak var streakButton: UIButton!
+  @IBOutlet weak var pauseButton: UIButton!
+  
+  @IBOutlet weak var customButtom: RoundedButton!
+  @IBOutlet weak var randomButton: RoundedButton!
   
   @IBOutlet weak var numbersCollectionView: UICollectionView!
-  @IBOutlet weak var operationsCollectionViewRow1: UICollectionView!
-  @IBOutlet weak var operationsCollectionViewRow2: UICollectionView!
-  private lazy var collections = [numbersCollectionView, operationsCollectionViewRow1, operationsCollectionViewRow2]
+  @IBOutlet weak var operationsCollectionView: UICollectionView!
+  lazy var collections = [numbersCollectionView, operationsCollectionView]
   
   //MARK: - Parameters
-  var timeManager: TimeManager!
+  lazy var timeManager = TimeManager(with: timerLabel)
   var gameManager = GameManager()
   var flowLayout = KTCenterFlowLayout()
+  lazy var viewBackground = Gradient(superView: view)
   
-  var menuDropped = 0
-  
-  var tapGesture = UITapGestureRecognizer()
-  var longPressGesture = UILongPressGestureRecognizer()
-  
+  var numberTap: UITapGestureRecognizer!
+  var numberDrag: UILongPressGestureRecognizer!
+  var operationDrag: UILongPressGestureRecognizer!
+  var tappedRow: Int?
+
   var playButtonOverlay = UIButton()
   var blurView = UIVisualEffectView()
   
+  var cameFromNumbers = false
+  var menuDropped = 0
   var result: Double?
   
   //MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
     setUpCollectionViews()
-    timeManager = TimeManager(with: timerLabel)
+    setUpGestureRecognizers()
+    
+    DispatchQueue.main.async {
+      self.viewBackground.add(to: self.view)
+      self.viewBackground.add(to: self.tabBarController!.tabBar)
+      self.viewBackground.add(to: self.customButtom)
+      self.viewBackground.add(to: self.randomButton)
+    }
   }
   
   override func viewDidLayoutSubviews() {
     recurringSetupForNumbers()
+    recurringSetupForOperations()
   }
   
   //MARK: - Actions
+  @IBAction func navButtonClicked(_ sender: UIButton) {
+    switchMenu(for: sender)
+    showMenu(for: sender.tag, in: dropDownView)
+  }
+  
   @IBAction func pauseButtonClicked(_ sender: UIButton) {
     if timeManager.timer.isValid {
       timeManager.stopTimer()
@@ -62,30 +80,6 @@ class MakeTenViewController: UIViewController {
       makeBackgroundVisible()
     }
     updatePauseButton()
-  }
-  
-  @IBAction func resetButtonClicked(_ sender: UIButton) {
-    gameManager.numbersArray = gameManager.numbersArray.clean()
-    numbersCollectionView.reloadData()
-  }
-  
-  @IBAction func checkButtonClicked(_ sender: UIButton) {
-    do {
-      result = try Calculator.evaluate(gameManager.numbersForCalc)
-      var randomResponse = Response.didMakeTen(false)
-      if result == 10.0 {
-        timeManager.stopTimer()
-        randomResponse = Response.didMakeTen(true)
-      }
-      resultLabel.text = "\(randomResponse) You made: \(result?.round(to: 2) ?? 0.00)"
-      
-    } catch {
-      let err = ErrorHandling.customiseErrorOutput(for: error)
-      let alert = UIAlertController(title: "Error", message: err, preferredStyle: .alert)
-      let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-      alert.addAction(action)
-      present(alert, animated: true)
-    }
   }
   
   @IBAction func customButtonClicked(_ sender: UIButton) {
@@ -100,17 +94,24 @@ class MakeTenViewController: UIViewController {
     updatePauseButton()
   }
   
-  @IBAction func shareButtonClicked(_ sender: UIButton) {
-    switchMenu(for: sender)
+  @IBAction func resetButtonClicked(_ sender: UIButton) {
+    gameManager.numbersArray = gameManager.numbersArray.clean()
+    numbersCollectionView.reloadData()
   }
   
-  @IBAction func streakButtonClicked(_ sender: UIButton) {
-    switchMenu(for: sender)
-  }
-  
-  @IBAction func modeButtonClicked(_ sender: UIButton) {
-    switchMenu(for: sender)
-    showMenu(for: sender.tag, in: dropDownView)
+  @IBAction func checkButtonClicked(_ sender: UIButton) {
+    do {
+      result = try Calculator.evaluate(gameManager.numbersForCalc)
+      result == 10.0 ? timeManager.stopTimer() : nil
+      let response = ResponseManager.provideCustomFeedback(for: result ?? 0)
+      resultLabel.text = "\(response) You made: \(result?.round(to: 2) ?? 0.00)"
+    } catch {
+      let err = ErrorManager.customOutput(for: error)
+      let alert = UIAlertController(title: "Error", message: err, preferredStyle: .alert)
+      let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+      alert.addAction(action)
+      present(alert, animated: true)
+    }
   }
   
   //MARK: - Views
@@ -149,18 +150,16 @@ class MakeTenViewController: UIViewController {
     let blurEffect = UIBlurEffect(style: .dark)
     blurView = UIVisualEffectView(effect: blurEffect)
     blurView.translatesAutoresizingMaskIntoConstraints = false
-    blurView.frame = self.view.bounds
-    UIView.animate(withDuration: 5.0) {
-      self.view.addSubview(self.blurView)
-    }
+    blurView.frame = view.bounds
+    view.addSubview(blurView)
     
     let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
     let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
     vibrancyView.translatesAutoresizingMaskIntoConstraints = false
-    vibrancyView.frame = self.view.bounds
+    vibrancyView.frame = view.bounds
     
-    blurView.contentView.addSubview(vibrancyView)
     vibrancyView.contentView.addSubview(playButtonOverlay)
+    blurView.contentView.addSubview(vibrancyView)
   }
   
   //MARK: - Functions
@@ -172,6 +171,7 @@ class MakeTenViewController: UIViewController {
       collection?.dataSource = self
       collection?.dragInteractionEnabled = true
       collection?.isUserInteractionEnabled = true
+      collection?.delaysContentTouches = false
     }
     numbersCollectionView.layer.borderWidth = 1
     numbersCollectionView.layer.cornerRadius = 15
@@ -184,6 +184,24 @@ class MakeTenViewController: UIViewController {
     flowLayout.estimatedItemSize = KTCenterFlowLayout.automaticSize
     numbersCollectionView.collectionViewLayout = flowLayout
     numbersCollectionView.layer.backgroundColor = K.BrandColors.grey?.resolvedColor(with: .current).cgColor
+    numbersCollectionView.reloadInputViews()
+  }
+  
+  fileprivate func recurringSetupForOperations() {
+    for index in 0...9 {
+      let cell = self.operationsCollectionView.cellForItem(at: [0, index])
+      cell?.layer.backgroundColor = K.BrandColors.grey?.resolvedColor(with: .current).cgColor
+    }
+    
+    DispatchQueue.main.async {
+      if let clearCell = self.operationsCollectionView.cellForItem(at: [0,10]) {
+        self.viewBackground.add(to: clearCell)
+      }
+      if let checkCell = self.operationsCollectionView.cellForItem(at: [0,11]) {
+        self.viewBackground.add(to: checkCell)
+      }
+      self.operationsCollectionView.reloadInputViews()
+    }
   }
   
   fileprivate func updatePauseButton() {

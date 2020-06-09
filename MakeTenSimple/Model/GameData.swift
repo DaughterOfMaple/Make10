@@ -8,15 +8,8 @@
 
 import Foundation
 
-enum GameMode {
-  case classic
-  case timeChallenge
-}
-
 struct GameManager {
-  var gameMode: GameMode = .classic
-  
-  var numbersArray = ["?", "?", "?", "?"]
+  var numbersArray = [""]
   var numbersForCalc: [String] {
     var array = [String]()
     for element in numbersArray {
@@ -28,8 +21,8 @@ struct GameManager {
     }
     return array
   }
-  
-  let operationsArray = ["+", "−", "×", "÷", "^", "√", "(", ")", "!", "ln", "Clear", "Check"]
+  let operationsRow1 = ["+", "−", "×", "÷"]
+  var operationsRow2 = ["^", "√", "(", "!"]
 }
 
 
