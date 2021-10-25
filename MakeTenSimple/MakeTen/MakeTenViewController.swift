@@ -31,19 +31,25 @@ class MakeTenViewController: UIViewController {
   //MARK: - Parameters
   lazy var timeManager = TimeManager(with: timerLabel)
   var gameManager = GameManager()
-  var flowLayout = KTCenterFlowLayout()
-  lazy var viewBackground = Gradient(superView: view)
+//  var flowLayout = KTCenterFlowLayout()
+  var flowLayout = UICollectionViewFlowLayout()
+//  lazy var viewBackground = Gradient(superView: view)
   
   var numberTap: UITapGestureRecognizer!
   var numberDrag: UILongPressGestureRecognizer!
+  var operationTap: UITapGestureRecognizer!
   var operationDrag: UILongPressGestureRecognizer!
-  var tappedRow: Int?
+  var dragStartPoint: CGPoint!
+  var dragEndPoint: CGPoint!
+  var sourceIndex: Int?
+  var cameFromNumbers = false
+  var cameFromOperations = false
 
   var playButtonOverlay = UIButton()
   var blurView = UIVisualEffectView()
   
-  var cameFromNumbers = false
   var menuDropped = 0
+  var gameInProgress = false
   var result: Double?
   
   //MARK: - Lifecycle methods
@@ -52,12 +58,12 @@ class MakeTenViewController: UIViewController {
     setUpCollectionViews()
     setUpGestureRecognizers()
     
-    DispatchQueue.main.async {
-      self.viewBackground.add(to: self.view)
-      self.viewBackground.add(to: self.tabBarController!.tabBar)
-      self.viewBackground.add(to: self.customButtom)
-      self.viewBackground.add(to: self.randomButton)
-    }
+//    DispatchQueue.main.async {
+//      self.viewBackground.add(to: self.view)
+//      self.viewBackground.add(to: self.tabBarController!.tabBar)
+//      self.viewBackground.add(to: self.customButtom)
+//      self.viewBackground.add(to: self.randomButton)
+//    }
   }
   
   override func viewDidLayoutSubviews() {
@@ -68,16 +74,18 @@ class MakeTenViewController: UIViewController {
   //MARK: - Actions
   @IBAction func navButtonClicked(_ sender: UIButton) {
     switchMenu(for: sender)
-    showMenu(for: sender.tag, in: dropDownView)
+//    showMenu(for: sender.tag, in: dropDownView)
   }
   
   @IBAction func pauseButtonClicked(_ sender: UIButton) {
-    if timeManager.timer.isValid {
+    if gameInProgress {
       timeManager.stopTimer()
       blurBackground()
-    } else if gameManager.numbersArray.count > 1 {
+      gameInProgress = false
+    } else {
       timeManager.startTimer()
       makeBackgroundVisible()
+      gameInProgress = true
     }
     updatePauseButton()
   }
@@ -94,12 +102,12 @@ class MakeTenViewController: UIViewController {
     updatePauseButton()
   }
   
-  @IBAction func resetButtonClicked(_ sender: UIButton) {
+  func resetButtonClicked() {
     gameManager.numbersArray = gameManager.numbersArray.clean()
     numbersCollectionView.reloadData()
   }
   
-  @IBAction func checkButtonClicked(_ sender: UIButton) {
+  func checkButtonClicked() {
     do {
       result = try Calculator.evaluate(gameManager.numbersForCalc)
       result == 10.0 ? timeManager.stopTimer() : nil
@@ -193,26 +201,27 @@ class MakeTenViewController: UIViewController {
       cell?.layer.backgroundColor = K.BrandColors.grey?.resolvedColor(with: .current).cgColor
     }
     
-    DispatchQueue.main.async {
-      if let clearCell = self.operationsCollectionView.cellForItem(at: [0,10]) {
-        self.viewBackground.add(to: clearCell)
-      }
-      if let checkCell = self.operationsCollectionView.cellForItem(at: [0,11]) {
-        self.viewBackground.add(to: checkCell)
-      }
-      self.operationsCollectionView.reloadInputViews()
-    }
+//    DispatchQueue.main.async {
+//      if let clearCell = self.operationsCollectionView.cellForItem(at: [0,10]) {
+//        self.viewBackground.add(to: clearCell)
+//      }
+//      if let checkCell = self.operationsCollectionView.cellForItem(at: [0,11]) {
+//        self.viewBackground.add(to: checkCell)
+//      }
+//      self.operationsCollectionView.reloadInputViews()
+//    }
   }
   
   fileprivate func updatePauseButton() {
-    if timeManager.timer.isValid {
-      pauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
-    } else {
+    if gameInProgress {
       pauseButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+    } else {
+      pauseButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
     }
   }
   
   fileprivate func resetGame() {
+    gameInProgress = true
     gameManager.numbersArray = ["?", "?", "?", "?"]
     resultLabel.text = ("Can you make 10?")
     timeManager.timer.invalidate()

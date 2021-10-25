@@ -39,7 +39,7 @@ extension MakeTenViewController: UICollectionViewDataSource {
       cell.layer.backgroundColor = K.BrandColors.grey?.resolvedColor(with: .current).cgColor
       
       if indexPath.item == 10 || indexPath.item == 11 {
-        cell.layer.backgroundColor = K.BrandColors.purple?.resolvedColor(with: .current).cgColor
+        cell.layer.backgroundColor = K.BrandColors.blue?.resolvedColor(with: .current).cgColor
         cell.layer.shadowColor = UIColor.darkGray.cgColor
         cell.layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
         cell.layer.shadowRadius = 1.0
@@ -59,7 +59,7 @@ extension MakeTenViewController: UICollectionViewDataSource {
 //MARK: - CollectionView Delegate FlowLayout Methods
 extension MakeTenViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return 1
+    return 0
   }
 }
 
@@ -71,15 +71,18 @@ extension MakeTenViewController: UICollectionViewDelegate {
     let collectionHeight = collectionView.bounds.height
     let spacing: CGFloat = 15  // why?
     
+    var cellWidth = (collectionWidth - spacing * 3) / 4
+    var cellHeight = (collectionHeight - spacing * 2) / 3
+    
     if collectionView == numbersCollectionView {
       let size = CGSize(width: 20, height: 20)
       let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .bold)]
       let labelSize = NSString(string: gameManager.numbersArray[indexPath.item]).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
-      return CGSize(width: (labelSize.width + 10), height: collectionHeight)
+      cellWidth = labelSize.width + 10
+//      cellHeight = labelSize.height + 30
+      cellHeight = collectionHeight
     }
-    
-    let cellWidth = (collectionWidth - spacing * 3) / 4
-    let cellHeight = (collectionHeight - spacing * 2) / 3
+
     return CGSize(width: cellWidth, height: cellHeight)
   }
 }

@@ -1,9 +1,9 @@
 //
-//  GameData.swift
+//  GameManager.swift
 //  MakeTenSimple
 //
 //  Created by Carly Mapleson on 3/6/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import Foundation
@@ -29,7 +29,7 @@ struct GameManager {
     return array
   }
   
-  let operationsArray = ["+", "−", "×", "÷", "^", "√", "(", ")", "!", "ln", "Clear", "Check"]
+  let operationsArray = ["+", "−", "×", "÷", "^", "√(", "(", ")", "!", "ln", "Clear", "Check"]
 }
 
 

@@ -1,16 +1,11 @@
 //
-//  Calc.swift
+//  Calculator.swift
 //  MakeTenSimple
 //
-//  Created by Carly Mapleson on 4/6/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
-//
-//  Calculator.swift
-//  TestingCVAgain
-//
 //  Created by Carly Mapleson on 24/5/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
+
 
 import Foundation
 import MathParser

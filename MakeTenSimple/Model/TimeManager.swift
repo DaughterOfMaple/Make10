@@ -1,9 +1,9 @@
 //
 //  TimeManager.swift
-//  TestingCVAgain
+//  MakeTenSimple
 //
 //  Created by Carly Mapleson on 30/5/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import UIKit
@@ -30,6 +30,4 @@ class TimeManager {
   func stopTimer() {
     timer.invalidate()
   }
-  
-  
 }

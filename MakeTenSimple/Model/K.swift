@@ -1,9 +1,9 @@
 //
 //  K.swift
-//  TestingCVAgain
+//  MakeTenSimple
 //
 //  Created by Carly Mapleson on 27/5/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,8 @@ struct K {
     static let text = UIColor(named: "text")
     static let grey = UIColor(named: "grey")
     static let black = UIColor(named: "grey")
+    static let blue = UIColor(named: "blue")
+    static let sectionHeader = UIColor(named: "sectionHeader")
   }
   
   struct Drop {
