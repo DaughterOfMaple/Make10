@@ -12,10 +12,10 @@ Four digits, one answer. Can YOU make 10?
   * [MVC](#mvc)
   * [Auto Layout](#auto-layout)
   * [TabBar Navigation](#tabbar-navigation)
-  * [UITableView & UICollectionView](#uitableview-&-uicollectionview)
+  * [UITableView and UICollectionView](#uitableview-and-uicollectionview)
   * [Drag and Drop](#drag-and-drop)
   * [Gesture Recognizers](#gesture-recognizers)
-  * [Data persistence with Core Data](#data-persistence-with-core-data-(TBC))
+  * [Data persistence with Core Data](#data-persistence-with-core-data)
 - [TODO](#todo)
   * [Priority fixes](#priority-fixes)
   * [Future ambitions](#future-ambitions)
@@ -97,7 +97,7 @@ I primarily used the Main Storyboard to create the Make10 interface, taking adva
 ### TabBar Navigation
 I chose to use TabBar Navigation in this game, as it seemed the most straightforward for the user to understand. This was new to me, but was quite easy to set up in the Main Storyboard, so was well suited to my level of experience.
 
-### UITableView & UICollectionView
+### UITableView and UICollectionView
 The UITableView seems to be one of the of the fundamental elements of many applications. As such, it was good to get familiar with its different elements and limitations on the Stats Page.
 I used a number of UICollectionViews in the MakeTen Page, as well as the Achievements Page of the application. Some challenges I came across include: defining 2 UICollectionViews with different elements in the same ViewController (I'm not sure that my solution to this is particularly elegant); defining re-usable cells; defining the flowlayout. My most interesting challenges, however, are outlined in the sections below.
 
@@ -109,20 +109,22 @@ Another challenging topic, because of the existing GestureRecognizers inherent t
 The main element that caused me some grief was that I wanted to be able to both tap a cell and drag a cell, with little to no delay on the drag pickup.  
 I finally made this happen by modifying the existing UILongPressGestureRecognizer of the UICollectionView and adding a new UITapGestureRecognizer to handle the desired tap behaviour.
 
-### Data persistence with Core Data (TBC)
+### Data persistence with Core Data
+(TBC)
 
-## TODO
+## TODO 
 
 ### Priority fixes
-1. Debug play button - this shouldn't be usable without starting a game (currently can start the timer with no game).
-2. Debug the Achievements Page UICollectionView layout - layout sometimes jumps out of alignment
+These ones are really bugging me. 🤔
+
+1. Debug play button - this shouldn't be usable without starting a game (currently can start the timer with no game)
+2. Debug the UICollectionView layouts - layout sometimes jumps out of alignment when the page is exited or scrolled
 3. Investigate 'XPC connection interrupted' error - this occasionally freezes the application
 4. Clean up code (remove redundant debugging print statements)
 5. Add user stats data (Core data + calculations)
 6. Update logic so that once the game is completed successfully, the check button is disabled
 7. Develop comprehensive test plan and unit tests
 8. Add pull-down top menu
-9. Add application icon
 
 ### Future ambitions
 - Time challenges
