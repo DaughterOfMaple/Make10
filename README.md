@@ -123,12 +123,12 @@ These ones are really bugging me. 🤔
 5. Consider behaviour of main game container if number of operations pushes the expression to a new line
 6. Consider behaviour of label text if the comments and result are too big for a single line of text
 
-These ones are my next steps
-7. Clean up code (remove redundant debugging print statements)
-8. Add user stats functionality (Core data + calculations)
-9. Update logic so that once the game is completed successfully, the check button is disabled
-10. Develop comprehensive test plan and unit tests
-11. Add pull-down top menu
+These ones are my next steps.
+1. Clean up code (remove redundant debugging print statements)
+2. Add user stats functionality (Core data + calculations)
+3. Update logic so that once the game is completed successfully, the check button is disabled
+4. Develop comprehensive test plan and unit tests
+5. Add pull-down top menu
 
 ### Future ambitions
 - Different 'log' based operations
