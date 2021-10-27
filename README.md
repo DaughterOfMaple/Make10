@@ -15,7 +15,7 @@ Four digits, one answer. Can YOU make 10?
   * [UITableView & UICollectionView](#uitableview-&-uicollectionview)
   * [Drag and Drop](#drag-and-drop)
   * [Gesture Recognizers](#gesture-recognizers)
-  * [Data persistence with Core Data](#data-persistence-with-core-data)
+  * [Data persistence with Core Data](#data-persistence-with-core-data-(TBC))
 - [TODO](#todo)
   * [Priority fixes](#priority-fixes)
   * [Future ambitions](#future-ambitions)
@@ -114,13 +114,15 @@ I finally made this happen by modifying the existing UILongPressGestureRecognize
 ## TODO
 
 ### Priority fixes
-1. Clean up code (remove redundant debugging print statements)
-2. Add user stats data (Core data + calculations)
-3. Update logic so that once the game is completed successfully, the check button is disabled
-4. Investigate 'XPC connection interrupted' error
-5. Develop comprehensive test plan and unit tests
-6. Add pull-down top menu
-7. Add application icon
+1. Debug play button - this shouldn't be usable without starting a game (currently can start the timer with no game).
+2. Debug the Achievements Page UICollectionView layout - layout sometimes jumps out of alignment
+3. Investigate 'XPC connection interrupted' error - this occasionally freezes the application
+4. Clean up code (remove redundant debugging print statements)
+5. Add user stats data (Core data + calculations)
+6. Update logic so that once the game is completed successfully, the check button is disabled
+7. Develop comprehensive test plan and unit tests
+8. Add pull-down top menu
+9. Add application icon
 
 ### Future ambitions
 - Time challenges
