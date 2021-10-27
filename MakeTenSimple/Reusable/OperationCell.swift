@@ -3,7 +3,7 @@
 //  MakeTenSimple
 //
 //  Created by Carly Mapleson on 31/5/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import UIKit
@@ -17,8 +17,6 @@ class OperationCell: UICollectionViewCell {
     layer.borderWidth = 1
     layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     
-//    layer.backgroundColor = K.BrandColors.grey?.resolvedColor(with: .current).cgColor
-    
     layer.masksToBounds = false
 //    layer.shadowColor = UIColor.darkGray.cgColor
 //    layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
@@ -29,9 +27,6 @@ class OperationCell: UICollectionViewCell {
     label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
     label.translatesAutoresizingMaskIntoConstraints = false
     label.textAlignment = .center
-    
-//    label.backgroundColor = .red
-//    layer.backgroundColor = UIColor.blue.cgColor
     
     self.addSubview(label)
     

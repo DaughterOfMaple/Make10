@@ -17,6 +17,7 @@ struct GameManager {
   var gameMode: GameMode = .classic
   
   var numbersArray = ["?", "?", "?", "?"]
+  
   var numbersForCalc: [String] {
     var array = [String]()
     for element in numbersArray {
@@ -26,10 +27,8 @@ struct GameManager {
         array.append(element)
       }
     }
-    return array
+    return array.reversed()
   }
   
   let operationsArray = ["+", "−", "×", "÷", "^", "√(", "(", ")", "!", "ln", "Clear", "Check"]
 }
-
-

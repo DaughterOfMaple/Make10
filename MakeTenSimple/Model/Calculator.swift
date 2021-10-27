@@ -37,20 +37,17 @@ fileprivate func checkInputs(for array: [String]) throws {
   for index in 0...(array.count - 2) {
     switch array[index] {
       
-    case "?": // more robust code in case of bugs with initial input
+    case "?": // More robust code in case of bugs with initial input
       throw InputError.numberInputMissing
-      //        errorByInputCheck = "Seriously? No. Try again."
       
-    case "0"..."9":  // DDMathParser adds implicit multiplication between numbers
+    case "0"..."9":  // DDMathParser adds implicit multiplication between numbers - do not allow
       if array[index + 1].isDigit() {
         throw InputError.operatorMissingBetweenNumbers
-        //          errorByInputCheck = "No, no, you can't just join numbers like that."
       }
       
-    case "!":  // DDMathParser allows double factorial
+    case "!":  // DDMathParser allows double factorial - do not allow
       if array[index + 1] == "!" {
         throw InputError.doubleFactorial
-        //          errorByInputCheck = "Let's not get greedy now... one factorial is enough 😑"
       }
       
     default:

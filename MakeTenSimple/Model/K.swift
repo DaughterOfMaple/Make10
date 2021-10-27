@@ -10,6 +10,8 @@ import UIKit
 
 struct K {
   struct BrandColors {
+    static let buttonPurple = UIColor(named: "buttonPurple")
+    static let buttonBlue = UIColor(named: "buttonBlue")
     static let purple = UIColor(named: "purple")
     static let purpleAlt = UIColor(named: "purpleAlt")
     static var purpleCG: CGColor = UIColor(named: "purple")!.resolvedColor(with: .current).cgColor

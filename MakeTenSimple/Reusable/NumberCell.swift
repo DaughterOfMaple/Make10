@@ -3,7 +3,7 @@
 //  MakeTenSimple
 //
 //  Created by Carly Mapleson on 31/5/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import UIKit
@@ -16,12 +16,6 @@ class NumberCell: UICollectionViewCell {
     label.textColor = K.BrandColors.text
     label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
     label.sizeToFit()
-    
-    layer.borderColor = UIColor.darkGray.cgColor
-    layer.borderWidth = 1
-    
-//    label.backgroundColor = .red
-//    layer.backgroundColor = UIColor.blue.cgColor
     
     self.addSubview(label)
     

@@ -3,14 +3,17 @@
 //  MakeTenSimple
 //
 //  Created by Carly Mapleson on 31/5/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import UIKit
 
 class StatsViewController: UIViewController {  
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet var topShadowView: UIView!
+  @IBOutlet var bottomShadowView: UIView!
   
+  @IBOutlet weak var fds: UIView!
   fileprivate let statCategories = ["Best Time:", "Best Streak (<5m):", "Best Time Challenge Score:", "Total games played:", "Total games completed:", "Average attempts to complete:"]
   
   fileprivate let statsImage = ["flame", "flame", "flame", "clock", "clock", "pencil"]
@@ -25,26 +28,8 @@ class StatsViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     
-    
-////    let viewBackground = Gradient(superView: view)
-////    viewBackground.add(to: view)
-////    viewBackground.add(to: self.tabBarController!.tabBar)
-//
-//    let topX = tableView.frame.origin.x + tableView.frame.width / 2
-//    let topY = tableView.frame.origin.y
-//
-//    let topShadow = CAGradientLayer()
-//    topShadow.frame = tableView.frame
-//    topShadow.colors = [UIColor.yellow.cgColor, UIColor.red.cgColor]
-////    topShadow.startPoint = CGPoint(x: topX, y: topY)
-////    topShadow.endPoint = CGPoint(x: topX, y: topY - 30)
-//    view.layer.addSublayer(topShadow)
-////    let bottomShadow = CAGradientLayer()
-////    bottomShadow.frame = view.bounds
-////    bottomShadow.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
-////    view.layer.insertSublayer(bottomShadow, at: 0)
-//
-
+    let viewBackground = Gradient(superView: view)
+    viewBackground.add(to: view)
   }
 }
 
@@ -71,6 +56,12 @@ extension StatsViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 60
+  }
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    if (scrollView.contentOffset.y == 0) {
+      topShadowView.alpha = 0
+    }
   }
 }
 

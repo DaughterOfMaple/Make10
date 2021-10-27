@@ -3,7 +3,7 @@
 //  MakeTenSimple
 //
 //  Created by Carly Mapleson on 31/5/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import UIKit
@@ -11,29 +11,28 @@ import KTCenterFlowLayout
 
 class MakeTenViewController: UIViewController {
   //MARK: - Storyboard objects
-  @IBOutlet weak var dropDownView: UIView!
-  @IBOutlet weak var dropDownBottomConstraint: NSLayoutConstraint!
+  @IBOutlet var dropDownView: UIView!
+  @IBOutlet var dropDownBottomConstraint: NSLayoutConstraint!
   
-  @IBOutlet weak var timerLabel: UILabel!
-  @IBOutlet weak var resultLabel: UILabel!
+  @IBOutlet var timerLabel: UILabel!
+  @IBOutlet var resultLabel: UILabel!
   
-  @IBOutlet weak var modeButton: UIButton!
-  @IBOutlet weak var streakButton: UIButton!
-  @IBOutlet weak var pauseButton: UIButton!
+  @IBOutlet var modeButton: UIButton!
+  @IBOutlet var streakButton: UIButton!
+  @IBOutlet var pauseButton: UIButton!
   
-  @IBOutlet weak var customButtom: RoundedButton!
-  @IBOutlet weak var randomButton: RoundedButton!
+  @IBOutlet var customButtom: RoundedButton!
+  @IBOutlet var randomButton: RoundedButton!
   
-  @IBOutlet weak var numbersCollectionView: UICollectionView!
-  @IBOutlet weak var operationsCollectionView: UICollectionView!
+  @IBOutlet var numbersCollectionView: UICollectionView!
+  @IBOutlet var operationsCollectionView: UICollectionView!
   lazy var collections = [numbersCollectionView, operationsCollectionView]
   
   //MARK: - Parameters
   lazy var timeManager = TimeManager(with: timerLabel)
   var gameManager = GameManager()
-//  var flowLayout = KTCenterFlowLayout()
   var flowLayout = UICollectionViewFlowLayout()
-//  lazy var viewBackground = Gradient(superView: view)
+  lazy var viewBackground = Gradient(superView: view)
   
   var numberTap: UITapGestureRecognizer!
   var numberDrag: UILongPressGestureRecognizer!
@@ -57,13 +56,12 @@ class MakeTenViewController: UIViewController {
     super.viewDidLoad()
     setUpCollectionViews()
     setUpGestureRecognizers()
+    self.viewBackground.add(to: self.tabBarController!.tabBar)
     
-//    DispatchQueue.main.async {
-//      self.viewBackground.add(to: self.view)
-//      self.viewBackground.add(to: self.tabBarController!.tabBar)
-//      self.viewBackground.add(to: self.customButtom)
-//      self.viewBackground.add(to: self.randomButton)
-//    }
+    DispatchQueue.main.async {
+      self.viewBackground.add(to: self.view)
+      self.viewBackground.add(to: self.tabBarController!.tabBar)
+    }
   }
   
   override func viewDidLayoutSubviews() {
@@ -101,27 +99,7 @@ class MakeTenViewController: UIViewController {
     timeManager.startTimer()
     updatePauseButton()
   }
-  
-  func resetButtonClicked() {
-    gameManager.numbersArray = gameManager.numbersArray.clean()
-    numbersCollectionView.reloadData()
-  }
-  
-  func checkButtonClicked() {
-    do {
-      result = try Calculator.evaluate(gameManager.numbersForCalc)
-      result == 10.0 ? timeManager.stopTimer() : nil
-      let response = ResponseManager.provideCustomFeedback(for: result ?? 0)
-      resultLabel.text = "\(response) You made: \(result?.round(to: 2) ?? 0.00)"
-    } catch {
-      let err = ErrorManager.customOutput(for: error)
-      let alert = UIAlertController(title: "Error", message: err, preferredStyle: .alert)
-      let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-      alert.addAction(action)
-      present(alert, animated: true)
-    }
-  }
-  
+
   //MARK: - Views
   fileprivate func setUpPlayButtonOverlay() {
     playButtonOverlay.sizeToFit()
@@ -200,16 +178,6 @@ class MakeTenViewController: UIViewController {
       let cell = self.operationsCollectionView.cellForItem(at: [0, index])
       cell?.layer.backgroundColor = K.BrandColors.grey?.resolvedColor(with: .current).cgColor
     }
-    
-//    DispatchQueue.main.async {
-//      if let clearCell = self.operationsCollectionView.cellForItem(at: [0,10]) {
-//        self.viewBackground.add(to: clearCell)
-//      }
-//      if let checkCell = self.operationsCollectionView.cellForItem(at: [0,11]) {
-//        self.viewBackground.add(to: checkCell)
-//      }
-//      self.operationsCollectionView.reloadInputViews()
-//    }
   }
   
   fileprivate func updatePauseButton() {
@@ -269,7 +237,7 @@ class MakeTenViewController: UIViewController {
           
           self.resetGame()
           for index in 0..<4 {
-            self.gameManager.numbersArray[index] = String(inputArray[index])
+            self.gameManager.numbersArray[index] = String(inputArray[3 - index])
           }
           self.numbersCollectionView.reloadData()
           self.timeManager.startTimer()

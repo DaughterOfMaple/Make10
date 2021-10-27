@@ -16,7 +16,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MakeTenViewController" customModule="MakeTenSimple" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gil-Me-MzE">
@@ -137,10 +137,12 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </collectionViewCellContentView>
+                                                                <gestureRecognizers/>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
                                                 </subviews>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="XvW-8V-IX9" secondAttribute="bottom" id="6rp-vP-tZi"/>
                                                     <constraint firstItem="XvW-8V-IX9" firstAttribute="top" secondItem="tUb-uv-FJ8" secondAttribute="top" id="AU0-bW-eY8"/>
@@ -298,7 +300,7 @@
             <objects>
                 <viewController id="Wli-zs-09E" customClass="StatsViewController" customModule="MakeTenSimple" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V2V-bM-vet">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBQ-i8-ht1">
@@ -311,7 +313,7 @@
                                             <tableViewCell clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" id="ITY-Z0-x2M" customClass="HistoryCell" customModule="MakeTenSimple" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="24.5" width="374" height="42"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ITY-Z0-x2M" id="k2I-e1-h8d" customClass="historyCell">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ITY-Z0-x2M" id="k2I-e1-h8d">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
@@ -370,12 +372,13 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6C-vn-oWa" userLabel="tableViewTopShadow">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6C-vn-oWa" userLabel="tableViewTopShadow">
                                         <rect key="frame" x="20" y="0.0" width="374" height="749"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2W-rZ-jSU" userLabel="tableViewBottomShadow">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="749"/>
+                                    <view opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="s2W-rZ-jSU" userLabel="tableViewBottomShadow">
+                                        <rect key="frame" x="20" y="10" width="374" height="749"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -385,10 +388,6 @@
                                     <constraint firstItem="Awr-wS-mNa" firstAttribute="bottom" secondItem="x6C-vn-oWa" secondAttribute="bottom" id="9WW-aR-0Rz"/>
                                     <constraint firstItem="Awr-wS-mNa" firstAttribute="leading" secondItem="MBQ-i8-ht1" secondAttribute="leading" constant="20" id="ABY-hZ-sZ6"/>
                                     <constraint firstItem="x6C-vn-oWa" firstAttribute="top" secondItem="Awr-wS-mNa" secondAttribute="top" id="Bej-kD-Jl2"/>
-                                    <constraint firstItem="s2W-rZ-jSU" firstAttribute="top" secondItem="Awr-wS-mNa" secondAttribute="top" id="D0W-4g-Xbj"/>
-                                    <constraint firstItem="s2W-rZ-jSU" firstAttribute="leading" secondItem="Awr-wS-mNa" secondAttribute="leading" id="HrH-ko-sj2"/>
-                                    <constraint firstItem="Awr-wS-mNa" firstAttribute="bottom" secondItem="s2W-rZ-jSU" secondAttribute="bottom" id="Ng4-vM-8Dr"/>
-                                    <constraint firstItem="Awr-wS-mNa" firstAttribute="trailing" secondItem="s2W-rZ-jSU" secondAttribute="trailing" id="Zyt-7C-Smm"/>
                                     <constraint firstItem="x6C-vn-oWa" firstAttribute="leading" secondItem="Awr-wS-mNa" secondAttribute="leading" id="dbM-bh-gAf"/>
                                     <constraint firstItem="Awr-wS-mNa" firstAttribute="trailing" secondItem="x6C-vn-oWa" secondAttribute="trailing" id="gEk-WF-FAs"/>
                                     <constraint firstAttribute="bottom" secondItem="Awr-wS-mNa" secondAttribute="bottom" constant="20" id="jqo-Bp-KXo"/>
@@ -407,7 +406,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Stats" image="clock" catalog="system" id="mPE-up-TlZ"/>
                     <connections>
+                        <outlet property="bottomShadowView" destination="s2W-rZ-jSU" id="4kP-5R-ORZ"/>
+                        <outlet property="fds" destination="x6C-vn-oWa" id="fW4-bf-agm"/>
                         <outlet property="tableView" destination="Awr-wS-mNa" id="czZ-wj-UFO"/>
+                        <outlet property="topShadowView" destination="x6C-vn-oWa" id="UeT-0X-cPH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1V-vL-pRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -419,7 +421,7 @@
             <objects>
                 <viewController id="pcb-vZ-NF6" customClass="AchievementsViewController" customModule="MakeTenSimple" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="78v-66-VjA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="baE-Jj-REK">

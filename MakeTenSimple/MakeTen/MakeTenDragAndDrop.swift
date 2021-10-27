@@ -3,7 +3,7 @@
 //  MakeTenSimple
 //
 //  Created by Carly Mapleson on 4/6/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import UIKit
@@ -37,9 +37,9 @@ extension MakeTenViewController:  UICollectionViewDragDelegate {
   }
   
   func collectionView(_ collectionView: UICollectionView, dragSessionDidEnd session: UIDragSession) {
-    // NOTE: collectionView is always the source
+    // NOTE: collectionView is the source collectionView (i.e. the starting point)
     
-    // check starting point
+    // check the starting point
     cameFromNumbers = (collectionView == numbersCollectionView) ? true : false
     cameFromOperations = (collectionView == operationsCollectionView) ? true : false
     

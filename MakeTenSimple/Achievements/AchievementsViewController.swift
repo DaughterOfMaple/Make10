@@ -3,7 +3,7 @@
 //  MakeTenSimple
 //
 //  Created by Carly Mapleson on 31/5/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import UIKit
@@ -16,9 +16,8 @@ class AchievementsViewController: UIViewController {
     collectionView.delegate = self
     collectionView.dataSource = self
     
-//    let viewBackground = Gradient(superView: view)
-//    viewBackground.add(to: view)
-//    viewBackground.add(to: self.tabBarController!.tabBar)
+    let viewBackground = Gradient(superView: view)
+    viewBackground.add(to: view)
   }
 }
 
@@ -28,7 +27,7 @@ extension AchievementsViewController: UICollectionViewDelegateFlowLayout{
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let collectionWidth = collectionView.bounds.width
-    let spacing: CGFloat = 20  // why?
+    let spacing: CGFloat = 20  // why does this work?
     
     let cellWidth = (collectionWidth - spacing * 4) / 3
     let cellHeight = cellWidth
@@ -48,7 +47,7 @@ extension AchievementsViewController: UICollectionViewDelegateFlowLayout{
 //MARK: - AchievementsViewController DataSource Methods
 extension AchievementsViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 15
+    return 12
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

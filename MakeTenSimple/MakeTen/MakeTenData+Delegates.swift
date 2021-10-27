@@ -3,7 +3,7 @@
 //  MakeTenSimple
 //
 //  Created by Carly Mapleson on 31/5/20.
-//  Copyright © 2020 CoobCorp. All rights reserved.
+//  Copyright © 2020 Carly Mapleson. All rights reserved.
 //
 
 import UIKit
@@ -39,7 +39,7 @@ extension MakeTenViewController: UICollectionViewDataSource {
       cell.layer.backgroundColor = K.BrandColors.grey?.resolvedColor(with: .current).cgColor
       
       if indexPath.item == 10 || indexPath.item == 11 {
-        cell.layer.backgroundColor = K.BrandColors.blue?.resolvedColor(with: .current).cgColor
+        cell.layer.backgroundColor = K.BrandColors.buttonBlue?.cgColor
         cell.layer.shadowColor = UIColor.darkGray.cgColor
         cell.layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
         cell.layer.shadowRadius = 1.0

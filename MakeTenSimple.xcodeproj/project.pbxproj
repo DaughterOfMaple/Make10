@@ -39,9 +39,7 @@
 		5A83EB65248B75C700FC3C1A /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB64248B75C700FC3C1A /* AlertManager.swift */; };
 		5A83EB67248B76F600FC3C1A /* ResponseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB66248B76F600FC3C1A /* ResponseManager.swift */; };
 		5A83EB69248BD16400FC3C1A /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB68248BD16400FC3C1A /* Gradient.swift */; };
-		5A83EB6B248C987800FC3C1A /* OperationsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB6A248C987800FC3C1A /* OperationsButton.swift */; };
 		5A83EB6D248C9A7200FC3C1A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB6C248C9A7200FC3C1A /* Button.swift */; };
-		5A83EB6F248C9C1500FC3C1A /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83EB6E248C9C1500FC3C1A /* CheckButton.swift */; };
 		5ABDAEC5248F61DB003F5367 /* StatsTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDAEC4248F61DB003F5367 /* StatsTableHeader.swift */; };
 		CF74CDE427177EDED779550D /* Pods_MakeTenSimple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1201267792105CD7E1E713 /* Pods_MakeTenSimple.framework */; };
 /* End PBXBuildFile section */
@@ -80,9 +78,7 @@
 		5A83EB64248B75C700FC3C1A /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		5A83EB66248B76F600FC3C1A /* ResponseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseManager.swift; sourceTree = "<group>"; };
 		5A83EB68248BD16400FC3C1A /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
-		5A83EB6A248C987800FC3C1A /* OperationsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsButton.swift; sourceTree = "<group>"; };
 		5A83EB6C248C9A7200FC3C1A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		5A83EB6E248C9C1500FC3C1A /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		5ABDAEC4248F61DB003F5367 /* StatsTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableHeader.swift; sourceTree = "<group>"; };
 		AD1201267792105CD7E1E713 /* Pods_MakeTenSimple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeTenSimple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27218960CBB605B9A18969A /* Pods-MakeTenSimple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeTenSimple.debug.xcconfig"; path = "Target Support Files/Pods-MakeTenSimple/Pods-MakeTenSimple.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,8 +183,6 @@
 				5ABDAEC4248F61DB003F5367 /* StatsTableHeader.swift */,
 				5A6F23EB24890F5800F39B06 /* RoundedButton.swift */,
 				5A83EB62248B3F5F00FC3C1A /* DropDownMenu.swift */,
-				5A83EB6A248C987800FC3C1A /* OperationsButton.swift */,
-				5A83EB6E248C9C1500FC3C1A /* CheckButton.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -353,7 +347,6 @@
 				5A2CC23B2483AFDE00B18EB7 /* AppDelegate.swift in Sources */,
 				5A6F23EC24890F5800F39B06 /* RoundedButton.swift in Sources */,
 				5A83EB63248B3F5F00FC3C1A /* DropDownMenu.swift in Sources */,
-				5A83EB6F248C9C1500FC3C1A /* CheckButton.swift in Sources */,
 				5A6F23EA24890D3600F39B06 /* Calculator.swift in Sources */,
 				5A5C00EE2489033300086468 /* InputErrors.swift in Sources */,
 				5A83EB65248B75C700FC3C1A /* AlertManager.swift in Sources */,
@@ -373,7 +366,6 @@
 				5A5C00E52488FFB000086468 /* MakeTenDragAndDrop.swift in Sources */,
 				5A83EB69248BD16400FC3C1A /* Gradient.swift in Sources */,
 				5A2CC23D2483AFDE00B18EB7 /* SceneDelegate.swift in Sources */,
-				5A83EB6B248C987800FC3C1A /* OperationsButton.swift in Sources */,
 				5A2CC25E2483BA6D00B18EB7 /* NumberCell.swift in Sources */,
 				5A5C00FB248903BB00086468 /* String.swift in Sources */,
 				5A6F23EE248B2C6C00F39B06 /* AchievementsViewController.swift in Sources */,
