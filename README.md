@@ -107,7 +107,7 @@ Wow. This one had me stumped for a while! Since I needed items to drag between d
 #### Gesture Recognizers
 Another challenging topic, because of the existing GestureRecognizers inherent to the UICollectionView.  
 The main element that caused me some grief was that I wanted to be able to both tap a cell and drag a cell, with little to no delay on the drag pickup.  
-I finally made this happen by modifying the existing UILongPressGestureRecognizer of the UICollectionView and adding a new UITapGestureRecognizer to handle the desired tap behaviour.
+I finally made this happen by modifying the existing UILongPressGestureRecognizer of the UICollectionView and adding a new UITapGestureRecognizer to handle the desired tap behaviour. This now works on the simulator, but does not seem to translate to a real device. Back to the drawing board!
 
 ### Data persistence with Core Data
 (TBC)
@@ -116,17 +116,22 @@ I finally made this happen by modifying the existing UILongPressGestureRecognize
 
 ### Priority fixes
 These ones are really bugging me. 🤔
+1. Debug drag and drop freezing at edge of screen (may be due to multiscreen functionality)
+2. Debug play button - this shouldn't be usable without starting a game (currently can start the timer with no game)
+3. Debug the UICollectionView layouts - layout sometimes jumps out of alignment when the page is exited or scrolled
+4. Investigate 'XPC connection interrupted' error - this occasionally freezes the application
+5. Consider behaviour of main game container if number of operations pushes the expression to a new line
+6. Consider behaviour of label text if the comments and result are too big for a single line of text
 
-1. Debug play button - this shouldn't be usable without starting a game (currently can start the timer with no game)
-2. Debug the UICollectionView layouts - layout sometimes jumps out of alignment when the page is exited or scrolled
-3. Investigate 'XPC connection interrupted' error - this occasionally freezes the application
-4. Clean up code (remove redundant debugging print statements)
-5. Add user stats data (Core data + calculations)
-6. Update logic so that once the game is completed successfully, the check button is disabled
-7. Develop comprehensive test plan and unit tests
-8. Add pull-down top menu
+These ones are my next steps
+7. Clean up code (remove redundant debugging print statements)
+8. Add user stats functionality (Core data + calculations)
+9. Update logic so that once the game is completed successfully, the check button is disabled
+10. Develop comprehensive test plan and unit tests
+11. Add pull-down top menu
 
 ### Future ambitions
+- Different 'log' based operations
 - Time challenges
 - Share a challenge with a friend
 - Achievement badges
